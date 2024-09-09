@@ -10,6 +10,8 @@
 	--clr-light-grayish-blue: hsl(210, 46%, 95%);
 	--clr-white: rgb(250, 250, 250);
 
+	--border-radius: 10px;
+
 	font-size: 13px;
 
 	/* Min screen size: 320px */
@@ -55,8 +57,15 @@ main {
 }
 
 .card {
-	border-radius: 10px;
+	border-radius: var(--border-radius);
+}
+
+.card__image {
 	overflow: hidden;
+	border-radius: var(--border-radius) var(--border-radius) 0 0;
+	aspect-ratio: 16/10;
+	object-fit: cover;
+	object-position: 50% 26%;
 }
 
 .card__body {
@@ -71,25 +80,30 @@ main {
 	line-height: 2ch;
 }
 
-.user-info {
+.card__body__paragraph {
+	color: var(--clr-very-dark-grayish-blue);
+	line-height: 2.6ch;
+}
+
+.card__user-info {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	gap: 1rem;
 }
 
-.user-info__avatar > img {
+.card__user-info__avatar > img {
 	max-width: 5rem;
 	border-radius: 100%;
 }
 
-.user-info__name-and-date {
+.card__user-info__name-and-date {
 	display: flex;
 	flex-direction: column;
 	align-items: start;
 }
 
-.user-info__btn-share {
+.card__user-info__btn-share {
 	margin-left: auto;
 	border: 0;
 	border-radius: 100%;
