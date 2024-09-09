@@ -71,7 +71,6 @@ main {
 	display: flex;
 	flex-direction: column;
 	gap: 2rem;
-	padding: 2.4rem;
 }
 
 .card__body__title {
@@ -86,11 +85,41 @@ main {
 	line-height: 2.7ch;
 }
 
+.card__transition-container {
+	position: relative;
+	display: flex;
+}
+
+/*** Share Buttons ***/
+
+.card__share-group {
+	position: absolute;
+	inset: 0;
+
+	display: flex;
+	align-items: center;
+	justify-content: start;
+
+	max-width: 100%;
+
+	background-color: cornflowerblue;
+	/* display: none; */
+}
+
+.card__share-group__social-links {
+	display: flex;
+}
+
+/*** User Info ***/
+
 .card__user-info {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	gap: 1rem;
+
+	background-color: salmon;
+	display: none;
 }
 
 .card__user-info__avatar > img {
@@ -155,4 +184,14 @@ footer {
 }
 .attribution a {
 	color: hsl(228, 45%, 44%);
+}
+
+/*** Utilities ***/
+
+.inline-padding {
+	padding-inline: 2.4rem;
+}
+
+.inline-margin {
+	margin-inline: 2.4rem;
 }
