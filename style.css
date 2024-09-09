@@ -180,7 +180,6 @@ main {
 	aspect-ratio: 1 / 1;
 
 	background-color: var(--clr-light-grayish-blue);
-	color: var(--clr-very-dark-grayish-blue);
 
 	z-index: 11;
 
@@ -203,9 +202,14 @@ main {
 .card__transition-container__btn-share:active {
 	top: 2px;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
+.card__transition-container__btn-share[data-active='true'] {
 	background-color: var(--clr-desaturated-dark-blue);
-	color: var(--clr-light-grayish-blue);
+}
+
+.card__transition-container__btn-share[data-active='true'] > svg {
+	fill: var(--clr-light-grayish-blue);
 }
 
 .btn-share-icon {
@@ -213,7 +217,8 @@ main {
 	transition: fill 0.2s;
 }
 
-.card__transition-container__btn-share:active > svg {
+.card__transition-container__btn-share:active > svg,
+.card__transition-container__btn-share[data-active='true'] {
 	fill: var(--clr-light-grayish-blue);
 }
 

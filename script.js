@@ -6,4 +6,5 @@ let shareButtonsActive = false;
 btnShare.addEventListener('click', () => {
 	shareButtonsActive = !shareButtonsActive;
 	shareButtonsGroup.dataset.active = shareButtonsActive;
+	btnShare.dataset.active = shareButtonsActive;
 });
