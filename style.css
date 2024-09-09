@@ -177,6 +177,10 @@ main {
 	background-color: var(--clr-light-grayish-blue);
 	color: var(--clr-very-dark-grayish-blue);
 
+	/* background-image: url(./images/icon-share.svg);
+	background-repeat: no-repeat;
+	background-position: 50% 50%; */
+
 	/*** Just to set the transitions ***/
 	top: 0;
 	box-shadow: none;
@@ -201,10 +205,14 @@ main {
 	color: var(--clr-light-grayish-blue);
 }
 
-.card__transition-container__btn-share:active > img {
+.btn-share-icon {
+	fill: var(--clr-very-dark-grayish-blue);
+	transition: fill 0.2s;
+}
+
+.card__transition-container__btn-share:active > svg {
 	/* testing */
-	fill: crimson;
-	background-color: aquamarine;
+	fill: var(--clr-light-grayish-blue);
 }
 
 /*** Attribution ***/
