@@ -88,6 +88,11 @@ main {
 .card__transition-container {
 	position: relative;
 	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	min-height: 5rem;
+	/* border-radius: 0 0 var(--border-radius) var(--border-radius); */
 }
 
 /*** Share Buttons ***/
@@ -102,12 +107,25 @@ main {
 
 	max-width: 100%;
 
-	background-color: cornflowerblue;
+	border-radius: 0 0 var(--border-radius) var(--border-radius);
+
+	background-color: var(--clr-very-dark-grayish-blue);
 	/* display: none; */
+}
+
+.card__share-group__label {
+	text-transform: uppercase;
+	color: var(--clr-light-grayish-blue);
+	letter-spacing: 0.8ch;
+	font-weight: 100;
+	margin-right: 1.2rem;
 }
 
 .card__share-group__social-links {
 	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1.2rem;
 }
 
 /*** User Info ***/
@@ -142,16 +160,24 @@ main {
 	color: var(--clr-desaturated-dark-blue);
 }
 
-.card__user-info__btn-share {
+.card__transition-container__btn-share {
 	position: relative;
+
 	margin-left: auto;
+
 	border: 0;
 	border-radius: 100%;
-	aspect-ratio: 1;
+
+	max-width: 2.4rem;
+	max-height: 2.4rem;
+	width: 100%;
+
+	aspect-ratio: 1 / 1;
+
 	background-color: var(--clr-light-grayish-blue);
 	color: var(--clr-very-dark-grayish-blue);
-	padding: 0.8rem;
 
+	/*** Just to set the transitions ***/
 	top: 0;
 	box-shadow: none;
 	filter: none;
@@ -160,17 +186,25 @@ main {
 	transition-duration: 0.2s;
 }
 
-.card__user-info__btn-share:hover {
+.card__transition-container__btn-share:hover {
 	cursor: pointer;
 	filter: brightness(110%);
 	top: -2px;
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
-.card__user-info__btn-share:active {
-	filter: brightness(90%);
+.card__transition-container__btn-share:active {
 	top: 2px;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+	background-color: var(--clr-desaturated-dark-blue);
+	color: var(--clr-light-grayish-blue);
+}
+
+.card__transition-container__btn-share:active > img {
+	/* testing */
+	fill: crimson;
+	background-color: aquamarine;
 }
 
 /*** Attribution ***/
