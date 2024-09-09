@@ -1,5 +1,9 @@
-const btn_share = document.getElementById('btn-share');
+const btnShare = document.getElementById('btn-share');
+const shareButtonsGroup = document.getElementById('share-buttons-group');
 
-btn_share.addEventListener('click', () => {
-	console.log('Hello, world');
+let shareButtonsActive = false;
+
+btnShare.addEventListener('click', () => {
+	shareButtonsActive = !shareButtonsActive;
+	shareButtonsGroup.dataset.active = shareButtonsActive;
 });

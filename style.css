@@ -92,16 +92,14 @@ main {
 	justify-content: center;
 
 	min-height: 5rem;
-	/* border-radius: 0 0 var(--border-radius) var(--border-radius); */
 }
 
-/*** Share Buttons ***/
+/*** Share Group ***/
 
 .card__share-group {
 	position: absolute;
 	inset: 0;
 
-	display: flex;
 	align-items: center;
 	justify-content: start;
 
@@ -110,7 +108,17 @@ main {
 	border-radius: 0 0 var(--border-radius) var(--border-radius);
 
 	background-color: var(--clr-very-dark-grayish-blue);
-	/* display: none; */
+
+	/* opacity: 50%; */
+	z-index: 10;
+}
+
+.card__share-group[data-active='true'] {
+	display: flex;
+}
+
+.card__share-group[data-active='false'] {
+	display: none;
 }
 
 .card__share-group__label {
@@ -135,9 +143,6 @@ main {
 	align-items: center;
 	justify-content: center;
 	gap: 1rem;
-
-	background-color: salmon;
-	display: none;
 }
 
 .card__user-info__avatar > img {
@@ -177,9 +182,7 @@ main {
 	background-color: var(--clr-light-grayish-blue);
 	color: var(--clr-very-dark-grayish-blue);
 
-	/* background-image: url(./images/icon-share.svg);
-	background-repeat: no-repeat;
-	background-position: 50% 50%; */
+	z-index: 11;
 
 	/*** Just to set the transitions ***/
 	top: 0;
@@ -211,7 +214,6 @@ main {
 }
 
 .card__transition-container__btn-share:active > svg {
-	/* testing */
 	fill: var(--clr-light-grayish-blue);
 }
 
