@@ -50,15 +50,16 @@ body {
 	background-color: var(--clr-light-grayish-blue);
 }
 
-main {
-	max-width: 24.2rem;
-	margin-block: auto;
-	background-color: var(--clr-white);
-}
-
 /*** Card ***/
 
 .card {
+	display: flex;
+	flex-direction: column;
+
+	max-width: 24.2rem;
+	margin-block: auto;
+	background-color: var(--clr-white);
+
 	border-radius: var(--border-radius);
 	box-shadow: 0 6px 30px rgba(45, 68, 82, 0.2);
 }
@@ -280,4 +281,26 @@ footer {
 
 .inline-margin {
 	margin-inline: 2.4rem;
+}
+
+/*** Responsive Design ***/
+
+@media screen and (min-width: 1024px) {
+	.card {
+		flex-direction: row;
+		max-width: 56rem;
+	}
+
+	.card__picture {
+		border-radius: var(--border-radius) 0 0 var(--border-radius);
+	}
+
+	.card__body__title {
+		font-size: 1.6rem;
+		line-height: 2ch;
+	}
+
+	.card__transition-container {
+		margin-bottom: 1.4rem;
+	}
 }
