@@ -60,6 +60,7 @@ main {
 
 .card {
 	border-radius: var(--border-radius);
+	box-shadow: 0 6px 30px rgba(45, 68, 82, 0.2);
 }
 
 .card__image {
@@ -72,7 +73,6 @@ main {
 .card__body {
 	display: flex;
 	flex-direction: column;
-	gap: 2rem;
 }
 
 .card__body__title {
@@ -80,11 +80,13 @@ main {
 	font-weight: 800;
 	line-height: 2.35ch;
 	color: var(--clr-very-dark-grayish-blue);
+	margin-top: 1.8rem;
 }
 
 .card__body__paragraph {
 	color: var(--clr-very-dark-grayish-blue);
 	line-height: 2.7ch;
+	margin-block: 1.2rem;
 }
 
 .card__transition-container {
@@ -142,6 +144,8 @@ main {
 	justify-content: center;
 	gap: 0.2rem;
 }
+
+/*** Social Link Buttons ***/
 
 .btn-social-link {
 	display: flex;
