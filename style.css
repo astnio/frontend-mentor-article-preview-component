@@ -293,6 +293,8 @@ footer {
 
 	.card__picture {
 		border-radius: var(--border-radius) 0 0 var(--border-radius);
+		background-position: 0 20%;
+		max-width: 22rem;
 	}
 
 	.card__body__title {
