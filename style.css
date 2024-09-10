@@ -63,11 +63,16 @@ main {
 	box-shadow: 0 6px 30px rgba(45, 68, 82, 0.2);
 }
 
-.card__image {
+.card__picture {
+	background-image: url(./images/drawers.jpg);
+	background-repeat: no-repeat;
+	background-position: 50% 20%;
+	background-size: cover;
+
+	width: 100%;
+	min-height: 15rem;
+
 	border-radius: var(--border-radius) var(--border-radius) 0 0;
-	aspect-ratio: 16/10;
-	object-fit: cover;
-	object-position: 50% 26%;
 }
 
 .card__body {
