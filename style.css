@@ -305,4 +305,33 @@ footer {
 	.card__transition-container {
 		margin-bottom: 1.4rem;
 	}
+
+	.card__share-group {
+		align-items: center;
+		justify-content: center;
+
+		inset: auto auto 6rem 19.85rem;
+
+		min-width: 21rem;
+
+		padding-block: 0.8rem;
+
+		border-radius: var(--border-radius);
+
+		box-shadow: 0 8px 6px rgba(0, 0, 0, 0.25);
+	}
+
+	.card__share-group::before {
+		content: '';
+
+		position: absolute;
+		top: 2.2rem;
+
+		width: 3.2rem;
+		height: 3.2rem;
+
+		background-color: var(--clr-very-dark-grayish-blue);
+
+		clip-path: polygon(50% 100%, 0% 50%, 100% 50%);
+	}
 }
